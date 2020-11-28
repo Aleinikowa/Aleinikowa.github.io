@@ -488,7 +488,7 @@ footer ._activ {
 @media screen and (min-width: 1400px) {
   .main {
     min-width: 100%;
-    background: url(images/bl1_big.jpg) center center no-repeat;
+    background: url(images/bl1.jpg) center center no-repeat;
   }
   .main-wrapper {
     min-width: 90%;
@@ -507,7 +507,7 @@ footer ._activ {
     background-position-x: 70%;
   }
   .about-wrapper__text {
-    padding-left: 15%;
+    padding-left: 10%;
   }
   .skills {
     max-width: 100%;
