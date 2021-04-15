@@ -15,44 +15,54 @@ let nav = document.getElementsByClassName('nav'),
     btnMain = document.getElementById('btn-main'),
     about = document.getElementById('about'),
     aboutBlock = document.getElementsByClassName('about')[0],
-    heightAbout = aboutBlock.clientHeight,
     mainBlock = document.getElementsByClassName('main')[0],
-    heightMain = mainBlock.clientHeight,
     skills = document.getElementById('skills'),
     portfolio = document.getElementById('portfolio'),
     portfolioBlock = document.getElementsByClassName('portfolio')[0],
-    heightPortfolio = portfolioBlock.clientHeight,
     contacts = document.getElementById('contacts'),
     decorationBlock = document.getElementsByClassName('decoration')[0],
-    heightDecoration = decorationBlock.clientHeight,
     position = 0;
 
 btnMain.onclick = () => {
+    let heightMain = mainBlock.clientHeight;
+
     let timerId = setInterval(() => window.scrollBy(0,10), 5);
     setTimeout(() => { clearInterval(timerId)}, heightMain / 2);
 }
 
 about.onclick = () => {
+    let heightMain = mainBlock.clientHeight;
+
     let timerId = setInterval(() => window.scrollBy(0,10), 5);
     setTimeout(() => { clearInterval(timerId)}, heightMain / 2);
 }
 
 skills.onclick = () => {
+    let heightMain = mainBlock.clientHeight,
+        heightAbout = aboutBlock.clientHeight;
+
     let timerId = setInterval(() => window.scrollBy(0,20), 10);
     setTimeout(() => { clearInterval(timerId)}, (heightMain + heightAbout) / 2);
 }
 
 portfolio.onclick = () => {
-    let skillsBlock = document.getElementsByClassName('skills')[0],
+    let heightMain = mainBlock.clientHeight,
+        heightAbout = aboutBlock.clientHeight,
+        skillsBlock = document.getElementsByClassName('skills')[0],
         heightScills = skillsBlock.clientHeight;
-        console.log ((heightMain + heightAbout + heightScills));
+
     let timerId = setInterval(() => window.scrollBy(0,20), 10);
     setTimeout(() => { clearInterval(timerId)}, (heightMain + heightAbout + heightScills) / 2);
 }
 
 contacts.onclick = () => {
-    let skillsBlock = document.getElementsByClassName('skills')[0],
-    heightScills = skillsBlock.clientHeight;
+    let heightMain = mainBlock.clientHeight,
+        heightAbout = aboutBlock.clientHeight,
+        skillsBlock = document.getElementsByClassName('skills')[0],
+        heightScills = skillsBlock.clientHeight,
+        heightPortfolio = portfolioBlock.clientHeight,
+        heightDecoration = decorationBlock.clientHeight;
+
     let timerId = setInterval(() => window.scrollBy(0,20), 10);
     setTimeout(() => { clearInterval(timerId)}, (heightMain + heightAbout + heightScills + heightPortfolio + heightDecoration) / 2);
 }
@@ -119,7 +129,7 @@ window.onload = () => {
             animation(portfolioHeader);
             setTimeout(animation(slider), 500);
         }
-        if (heightScroll > 2800 && heightScroll < 4440) {
+        if (heightScroll > 2380 && heightScroll < 4440) {
             animation(portfolioHeader);
             setTimeout(animation(footer), 100);
         }

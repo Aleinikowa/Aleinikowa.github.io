@@ -29,7 +29,7 @@
 
 @color-white: #e0f2ff;
 @color-black: #060b0d;
-@color-dark-green: #4b674a;
+@color-dark-green: #164414;
 @padd_top: 90px;
 @padd_side: 45px;
 @span_green: 55px;
@@ -39,6 +39,9 @@
     padding: 0;
 }
 body {
+    max-width: 3000px;
+    width: 100%;
+    margin: 0 auto;
     font-family: 'Exo', sans-serif;
 }
 
@@ -100,7 +103,7 @@ h6 {
     .max-width();
     &-wrapper {
         .max-width-content();
-        min-height: 785px;
+        height: 785px;
         background: url(images/bl1.jpg) center center no-repeat;
         text-align: center;
         nav {
@@ -498,10 +501,13 @@ footer {
 }
 @media screen and (min-width : 1400px) {
     .main {
-        min-width: 100%;
-        background: url(images/bl1_big.jpg) center center no-repeat;
+        max-width: 4000px;
+        width: 100%;
+        margin: 0 auto;
+        background: url(images/Group2.jpg) center center no-repeat;
         &-wrapper {
             min-width: 90%;
+            height: 1000px;
             background: none;
             nav {
                 max-width: initial;
@@ -527,6 +533,7 @@ footer {
             max-width: 100%;
         }
     }
+
     .decoration {
         max-width: 100%;
         min-width: 100%;
@@ -544,6 +551,31 @@ footer {
         }
     }    
 }
+
+@media screen and (min-width : 2300px) {
+    .portfolio {
+        max-width: 3000px;
+        &-wrapper {
+            &__header {
+                span {
+                    top: 155px;
+                    left: 49%;
+                }
+            }
+            max-width: 2300px;
+            &__content {
+                .slider {
+                    width: 2300px;
+                    margin: 40px auto 0;
+                }
+                .btn-left, .btn-right, .slider-span {
+                    display: none;
+                }
+            }
+        }
+    }  
+}
+
 
 @media screen and (max-width : 1170px) {
     .about {
@@ -566,7 +598,6 @@ footer {
                         .card {
                             min-width: 100%;
                             margin: 0;
-                            // margin-left: -16px;
                         }
                     }
                 }
