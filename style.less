@@ -313,14 +313,15 @@ h6 {
             text-align: center;
             .slider {
                 width: 1150px;
-                height: 600px;
+                height: auto;
                 margin: 40px auto 0;
-                overflow: hidden;
-                opacity: 0;
-                transition: .2s;
                 .slider-track {
                     display: flex;
-                    transition: 0.5s;
+                    display: -webkit-flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
                     .card {
                         min-width: 377px;
                         height: 587px;
